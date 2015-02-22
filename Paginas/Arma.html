@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+	<head>
+		<title>Special Gift</title>
+		<link rel="stylesheet" type="text/css" href="../CSS/estilo.css">
+		<script type="text/javascript" src="../JS/script.js">
+		var isIE = '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;
+		</script>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<div id="contenedor">
+		<header>
+			<a href="../index.html"><img src="../Recursos/logo003.png" id="nombre"></a>
+			<a href="../index.html"><img src="../Recursos/caja.png" id="logo01"></a>
+			<a href="http://www.facebook.com/specialgiftoficial" title="Facebook"><img src="../Recursos/fb.png" id="fb"></a>
+			<a href="https://twitter.com/_SpecialGift" title="Twitter"><img src="../Recursos/tw.png" id="tw"></a>
+			<a href="Empresa/Contacto.html" title="Contacto"><img src="../Recursos/contc.png" id="contc"></a>
+			<a href="Arma.html" title="Arma tu SG"><img src="../Recursos/armasg.png" id="armasg"></a>
+			<div class="divisor"></div>
+			<form method="post" name="frm" action="Buscar.php">
+			<input type="image" src="../Recursos/barra.png" id="buscar">
+			<input type="text" id="buscarb" name="busq" required>
+			</form>
+		</header>
+			<nav>
+				<ul>
+					<li><a href="../index.html">INICIO</a></li>
+					<li><a href="Desayunos.html">DESAYUNOS</a></li>
+					<li><a href="Vinos.html">VINOS</a></li>
+					<li><a href="Especiales.html">ESPECIALES</a></li>
+					<li><a href="Bebes.html">BEBES</a></li>
+					<li><a href="Fluches.html">FLUCHES</a></li>
+				</ul>	
+			</nav>
+			<section>
+				<h2>Arma tu Special Gift</h2><br>
+				<h4>Aqui encontraras todos los elementos con los que</h4>
+				<h4>puedes armar tu propio Special Gift</h4><br><br>
+				<div id="divbr"></div>
+				<div id="cont">
+					<div class="cont6">
+						<form method="post" action="Pedido.php" name="frmarmado">
+							<table>
+								<tr>
+									<td>
+										<select name="desa" id="desa" onchange="desayuno(this.value);">
+											<option></option>
+											<option>Yogurt</option>
+											<option>Ensalada</option>
+											<option>Chapata</option>
+											<option>Crossaint</option>
+											<option>Sincronizadas</option>
+											<option>Empanadas</option>
+											<option>Kit Cereal</option>
+										</select><label for="desa">Desayunos:</label>
+									</td>
+									<td>
+										<input type="text" name="dyno" id="dyno" value="" readonly>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<select name="comida" id="comida" onchange="comidas(this.value);">
+											<option></option>
+											<option>Sushi</option>
+											<option>Pizza</option>
+											<option>Hamburguesa</option>
+											<option>Paella</option>
+											<option>Salmón</option>
+											<option>Carnes Frias</option>
+											<option>Quesos</option>
+										</select><label for="comida">Comidas:</label>
+									</td>
+									<td>
+										<input type="text" name="cmda" id="cmda" value="" readonly>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<select name="pastel" id="pastel" onchange="pasteles(this.value);">
+											<option></option>
+											<option>Chocolate 10</option>
+											<option>Chocolate 2</option>
+											<option>Limon 10</option>
+											<option>Limon 2</option>
+											<option>Fresas 10</option>
+											<option>Fresas 2</option>
+											<option>Duraznos 10</option>
+											<option>Duraznos 2</option>
+											<option>Moca 10</option>
+											<option>Moca 2</option>
+											<option>Copa Chocolate</option>
+										</select><label for="pastel">Pastel:</label>
+									</td>
+									<td>
+										<input type="text" name="pstl" id="pstl" value="" readonly>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<select name="coffe" id="coffe" onchange="coffes(this.value);">
+											<option></option>
+											<option>Capuccino</option>
+											<option>Makiato</option>
+											<option>Hershey</option>
+											<option>Agua Perrier</option>
+											<option>Refresco Cola</option>
+											<option>Jugo</option>
+										</select><label for="coffe">Bebidas:</label>
+									</td>
+									<td>
+										<input type="text" name="cff" id="cff" value="" readonly>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<select name="vino" id="vino" onchange="vinos(this.value);">
+											<option></option>
+											<option>Botella</option>
+											<option>Botella Ind</option>
+											<option>Accesorios p/Vino</option>
+											<option>Copas 2</option>
+										</select><label for="vino">Vinos:</label>
+									</td>
+									<td>
+										<input type="text" name="vns" id="vns" value="" readonly>
+									</td>
+								</tr>
+								
+								<tr>
+									<td>
+										<select name="flor" id="flor" onchange="flores(this.value);">
+											<option></option>
+											<option>Rosas 6</option>
+											<option>Rosa</option>
+											<option>Osito</option>
+											<option>Rana</option>
+											<option>Conejo</option>
+											<option>Tradicional</option>
+										</select><label for="flor">Flores:</label>
+									</td>
+									<td>
+										<input type="text" name="flrs" id="flrs" value="" readonly>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<select name="tasa" id="tasa" onchange="tasas(this.value);">
+											<option></option>
+											<option>Love</option>
+											<option>Natural</option>
+											<option>Psyco</option>
+											<option>Mini</option>
+										</select><label for="tasa">Tasas:</label>
+									</td>
+									<td>
+										<input type="text" name="ts" id="ts" value="" readonly>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<select name="mantel" id="mantel" onchange="manteles(this.value);">
+											<option></option>
+											<option>Corazones</option>
+											<option>Psicodélico</option>
+											<option>Verde</option>
+											<option>Azul</option>
+											<option>Rosa</option>
+											<option>Amarillo</option>
+											<option>Aniversario</option>
+											<option>Felicidades</option>
+										</select><label for="mantel">Mantel:</label>
+									</td>
+									<td>
+										<input type="text" name="mntl" id="mntl" value="" readonly>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<select name="ad" id="ad" onchange="adss(this.value);">
+											<option></option>
+											<option>Portarretratos</option>
+											<option>Copa de Dulces</option>
+											<option>Muñeco Peluche</option>
+											<option>Florero</option>
+											<option>Velas aromáticas</option>
+											<option>Termo</option>
+											<option>Juego de Té</option>
+										</select><label for="ad">Adicionales:</label>
+									</td>
+									<td>
+										<input type="text" name="ads" id="ads" value="" readonly>
+									</td>
+								</tr>
+								<tr>
+									<td><label>Costo de Envio y Embalaje:</label></td>
+									<td>
+										<input type="text" name="emv" id="env" value="$ 180.00" readonly>
+									</td>
+								</tr>
+								<tr>
+									<td><label>Total:</label></td>
+									<td>
+										<input type="text" name="tot" id="tot" value="$ 0.00" readonly>
+									</td>
+								</tr>
+							</table>
+							<input type="submit" value="Pedir">
+							<br><br><br><br><br>
+						</form>
+					</div>
+				</div>
+			</section>
+			<aside>
+				<div class="dtsEmp">
+					<p>POR QUE SIEMPRE HAY UN MOMENTO ESPECIAL</p>
+				</div>
+			</aside>
+			<aside>
+				<div class="dtsEmp">
+					<ul>
+						<li><a href="Empresa/Nosotros.html">Nosotros</a></li>
+						<li><a href="Empresa/Mision.html">Misión</a></li>
+						<li><a href="Empresa/Vision.html">Visión</a></li>
+						<li><a href="Empresa/Valores.html">Valores</a></li>
+						<li><a href="Empresa/Organigrama.html">Organigrama</a></li>
+						<li><a href="Empresa/Contacto.html">Contacto</a></li>
+						<li><a href="Empresa/Politicas.html">Políticas</a></li>	
+					</ul>					
+				</div>
+			</aside>
+			<footer>
+				<p>Todos los regalos son especiales y diferentes, diseñados y hechos para cada persona que los recibe, puede tener variaciones en productos respetando el contenido y servicios que te ofrecemos.</p>
+				<p>Los contenidos (especialmente los datos, la información, las ilustraciones, los logotipos, las fotografías, el audio, los vídeos, etc.) que aparecen o que están disponibles en esta web están protegidos en razón del derecho de autor y de otros derechos de propiedad intelectual y son propiedad exclusiva de Special Gift. Cualquier copia, reproducción, representación, alteración, difusión, adaptación, modificación, integral o parcial, del contenido de esta página web es ilícita.</p>
+				<div class="des">
+					<p>desarrollado por XOLOTSOFT</p>
+				</div>
+				<img src="../Recursos/XOLOTSOFT02.png">
+			</footer>
+		</div>
+	</body>
+</html>
